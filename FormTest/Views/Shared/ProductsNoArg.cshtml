@@ -1,0 +1,27 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+
+<form asp-controller="Apply" asp-action="NoArg" >
+
+    <fieldset>
+        <h2>Url.Action result</h2>
+        <p>
+            @Url.Action("NoArg", "Apply" );
+        </p>
+
+
+    </fieldset>
+    <fieldset>
+
+        <button type="submit"  asp-controller="Apply" asp-action="NoArg" >Submit</button>
+
+    </fieldset>
+
+
+</form>
