@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -45,29 +40,30 @@ namespace FormTest {
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            
-
 
             app.UseMvc(routes => {
 
-                // specific routes
                 routes.MapRoute(
-                    name: "StandardApply",
-                    template: "/standardapply",
-                    defaults: new { area = "Products", controller = "Apply", action = "Index", eid = 3 }
+                    name: "customroute",
+                    template: "/customroute",
+                    defaults: new { /*area = "Products",*/ controller = "Apply", action = "Index", eid = 1 }
                 );
 
-
                 routes.MapRoute(
-                    name: "AdvantageApply",
-                    template: "/apply",
-                    defaults: new { area = "Products", controller = "Apply", action = "Index", eid = 2 }
+                    name: "anothercustomroute",
+                    template: "/anothercustomroute",
+                    defaults: new { /*area = "Products",*/ controller = "Apply", action = "Index", eid = 2 }
                 );
 
+                routes.MapRoute(
+                    name: "customroutenoarg",
+                    template: "/customroutenoarg",
+                    defaults: new { /*area = "Products",*/ controller = "Apply", action = "NoArg" }
+                );
 
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{eid?}");
             });
         }
     }

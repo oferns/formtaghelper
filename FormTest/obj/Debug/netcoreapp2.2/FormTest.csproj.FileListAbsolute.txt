@@ -29,3 +29,4 @@ C:\Users\Ollie\source\repos\FormTest\FormTest\obj\Debug\netcoreapp2.2\FormTest.d
 C:\Users\Ollie\source\repos\FormTest\FormTest\obj\Debug\netcoreapp2.2\FormTest.pdb
 C:\Users\Ollie\source\repos\FormTest\FormTest\obj\Debug\netcoreapp2.2\FormTest.csproj.CopyComplete
 C:\Users\Ollie\source\repos\FormTest\FormTest\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Products.g.cshtml.cs
+C:\Users\Ollie\source\repos\FormTest\FormTest\obj\Debug\netcoreapp2.2\Razor\Views\Shared\ProductsNoArg.g.cshtml.cs
