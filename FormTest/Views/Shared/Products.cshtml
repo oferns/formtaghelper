@@ -1,0 +1,27 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+
+<form asp-area="Products" asp-controller="Apply" asp-action="Index" asp-route-eid="@Model.ProductId">
+
+    <fieldset>
+        <h2>Url.Action result</h2>
+        <p>
+            @Url.Action("Index", "Apply", new { area = "Products", eid = Model.ProductId });
+        </p>
+
+
+    </fieldset>
+    <fieldset>
+
+        <button type="submit" asp-area="Products" asp-controller="Apply" asp-action="Index" asp-route-eid=@Model.ProductId >Submit</button>
+
+    </fieldset>
+
+
+</form>
